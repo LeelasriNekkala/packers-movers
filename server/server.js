@@ -21,9 +21,22 @@ const app = express();
 
 // middlewares
 app.use(express.json());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://packers-movers-beige.vercel.app",
+];
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   }),
 );
