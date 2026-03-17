@@ -213,11 +213,12 @@ Password
 Create `.env` file inside **server folder**
 
 PORT=3000
-MONGO_URI=mongodb+srv://leelasrinekkala_db_user:fu2lEjfzxobzmjec@cluster0.dibglsd.mongodb.net/?appName=Cluster0
-JWT_SECRET=supersecretkey
-CLOUD_NAME=di0v9u9ps
-CLOUD_API_KEY=218128369437968
-CLOUD_API_SECRET=apzwfkCNXtYLlxgAyLtA09QsaJQ
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+
+CLOUD_NAME=your_cloudinary_name
+CLOUD_API_KEY=your_cloudinary_key
+CLOUD_API_SECRET=your_cloudinary_secret
 ---
 
 # 🚀 Running the Project
